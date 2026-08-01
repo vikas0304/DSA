@@ -8,6 +8,8 @@
 // };
 
 
+var isPalindrome = function(x) {
+  x = String(x);
   for (let i = 0; i <= x.length / 2; i++) {
     if (x.length == 0 || x.length == 1) {
       return true;
@@ -19,6 +21,7 @@
       return false;
     }
   }
-  return true;
+    return true;
+}
 
-console.log(isPalindrome(292));
+console.log(isPalindrome(-121));
