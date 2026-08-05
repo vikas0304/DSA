@@ -1,4 +1,4 @@
-function findMinimum(nums){
+function findMaximum(nums){
     if(nums.lenth === 0) return false;
     let max = nums[0];
     for(let i = 1; i <= nums.length; i++){
@@ -10,4 +10,4 @@ function findMinimum(nums){
 }
 
 const nums = [1,6,3];
-console.log(findMinimum(nums));
+console.log(findMaximum(nums));
