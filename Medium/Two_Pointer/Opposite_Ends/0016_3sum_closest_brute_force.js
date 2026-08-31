@@ -3,19 +3,12 @@ var threeSumClosest = function(nums, target) {
     nums.sort((a, b) => a - b);
     let n = nums.length;
     for (let i = 0; i < n - 2; i++) {
-        let left = i + 1;
-        let right = n - 1;
-        while (left < right) {
-            const currentSum = nums[i] + nums[left] + nums[right];
-            if (Math.abs(currentSum - target) < Math.abs(closestSum - target)) {
-                closestSum = currentSum;
-            }
-            if (currentSum < target) {
-                left++;
-            } else if (currentSum > target) {
-                right--;
-            } else {
-                return currentSum; // Found the exact target sum
+        for (let j = i + 1; j < n - 1; j++) {
+            for (let k = j + 1; k < n; k++) {
+                const currentSum = nums[i] + nums[j] + nums[k];
+                if (Math.abs(currentSum - target) < Math.abs(closestSum - target)) {
+                    closestSum = currentSum;
+                }
             }
         }
     }
