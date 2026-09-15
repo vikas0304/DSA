@@ -16,13 +16,12 @@ var totalNumbers = function(digits) {
         }
     }
 
-    return Array.from(uniqueNumbers).sort((a, b) => a - b);
+    return uniqueNumbers.size;
 };
 
 const arr = [0,2,2];
 const result = totalNumbers(arr);
-console.log("Count:", result.length);
-console.log("Numbers:", result);
+console.log(result)
 
 /*
 
