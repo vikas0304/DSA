@@ -1,7 +1,6 @@
 var countCommas = function(n) {
     if(n < 1000) return 0;
-    let items = n - 1000 + 1
-    citems)
+    return n - 1000 + 1
 };
 
 const num = 1010
